@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admission Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Covid status</th>
+      <th>Hospital status</th>
+      <th>Details</th>
+      <th>Cases</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admission_data.each do |admission_datum| %>
+      <tr>
+        <td><%= admission_datum.date %></td>
+        <td><%= admission_datum.covid_status %></td>
+        <td><%= admission_datum.hospital_status %></td>
+        <td><%= admission_datum.details %></td>
+        <td><%= admission_datum.cases %></td>
+        <td><%= link_to 'Show', admission_datum %></td>
+        <td><%= link_to 'Edit', edit_admission_datum_path(admission_datum) %></td>
+        <td><%= link_to 'Destroy', admission_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admission Datum', new_admission_datum_path %>

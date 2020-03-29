@@ -1,0 +1,2 @@
+module AdmissionDataHelper
+end

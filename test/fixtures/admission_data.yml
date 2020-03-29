@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-03-29
+  covid_status: MyString
+  hospital_status: MyString
+  details: MyString
+  cases: 1
+
+two:
+  date: 2020-03-29
+  covid_status: MyString
+  hospital_status: MyString
+  details: MyString
+  cases: 1

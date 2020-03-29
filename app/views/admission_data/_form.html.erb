@@ -1,0 +1,42 @@
+<%= form_with(model: admission_datum, local: true) do |form| %>
+  <% if admission_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admission_datum.errors.count, "error") %> prohibited this admission_datum from being saved:</h2>
+
+      <ul>
+        <% admission_datum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :covid_status %>
+    <%= form.text_field :covid_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hospital_status %>
+    <%= form.text_field :hospital_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :details %>
+    <%= form.text_field :details %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cases %>
+    <%= form.number_field :cases %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

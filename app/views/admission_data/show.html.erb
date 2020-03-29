@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @admission_datum.date %>
+</p>
+
+<p>
+  <strong>Covid status:</strong>
+  <%= @admission_datum.covid_status %>
+</p>
+
+<p>
+  <strong>Hospital status:</strong>
+  <%= @admission_datum.hospital_status %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @admission_datum.details %>
+</p>
+
+<p>
+  <strong>Cases:</strong>
+  <%= @admission_datum.cases %>
+</p>
+
+<%= link_to 'Edit', edit_admission_datum_path(@admission_datum) %> |
+<%= link_to 'Back', admission_data_path %>

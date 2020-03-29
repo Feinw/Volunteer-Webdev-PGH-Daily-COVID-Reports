@@ -1,0 +1,2 @@
+class AdmissionDatum < ApplicationRecord
+end
