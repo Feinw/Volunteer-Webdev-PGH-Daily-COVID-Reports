@@ -55,3 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Google Drive
 gem "google_drive"
+
+#bootstrap
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
