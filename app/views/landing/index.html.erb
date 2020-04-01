@@ -1,6 +1,7 @@
-<h1>Sheet5</h1>
+<h1>data</h1>
 
-<%= line_chart( { 5 => 10, 25 => 150, 55 => 100 } )%>
+<%= column_chart( [{name: "with", data: @w_covid}, {name: "pui", data: @pui}, {name: "discharged", data: @discharged}, {name: "expired", data: @expired}] )%>
+
 
 <div class="container">
     <table class="table">
