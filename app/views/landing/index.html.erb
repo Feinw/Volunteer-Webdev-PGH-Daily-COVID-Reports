@@ -1,6 +1,7 @@
 <h1>data</h1>
 
-<%= column_chart( [{name: "with", data: @w_covid}, {name: "pui", data: @pui}, {name: "discharged", data: @discharged}, {name: "expired", data: @expired}] )%>
+<%# use this for notes https://chartkick.com/%>
+<%= line_chart [{name: "with", data: @w_covid},{name: "pui", data: @pui},{name: "discharged", data: @discharged},{name: "expired", data: @expired}], curve: false, xtitle: "date", ytitle: "cases" %>
 
 
 <div class="container">
