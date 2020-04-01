@@ -59,3 +59,5 @@ gem "google_drive"
 #bootstrap
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+
+gem 'chartkick'
