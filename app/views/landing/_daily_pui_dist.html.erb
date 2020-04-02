@@ -1,5 +1,5 @@
 <div class="col-md-6">
 
-    <%= column_chart @p_dist, stacked: true, title: "Daily Distribution of Admitted PUIs" %>
+    <%= column_chart @p_dist, stacked: true, title: "Daily Distribution of Admitted PUIs", legend: "top", library: { :series => { 4 => { type: "line", curveType: "none" } } } %>
 
 </div>

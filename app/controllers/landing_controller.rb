@@ -7,6 +7,7 @@ class LandingController < ApplicationController
     @trend = getCumulativeTrend
     @c_dist = getCovidDist
     @p_dist = getPUIDist
+    @annotations_array = [1,2,3,4,5,6,7,8,9]
   end
 
   private
@@ -58,17 +59,19 @@ class LandingController < ApplicationController
 
   def getPUIDist
     data = []
-    letters = [10,11,13,14]
-    names = ["Guarded", "HCW", "Reclassified", "Stable"]
+    letters = [10,11,13,14,18]
+    names = ["Guarded", "HCW", "Reclassified", "Stable", "Pending Result"]
     letters.each do |col|
       values = {}
       (5..@daily_total.num_rows-1).each do |row|
         values[@daily_total[row, 1]] = @daily_total[row, col]
       end
-      if col<12
+      if col<13
         data << {name: names[col-10], data: values} 
-      else
+      elsif col<18
         data << {name: names[col-11], data: values} 
+      else
+        data << {name: names[col-14], data: values} 
       end
     end
     return data
